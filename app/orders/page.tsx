@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const Orders = () => {
-  const { cartItems, totalItems, placeOrder } = useCartStore();
+  const { cartItems, placeOrder } = useCartStore();
   const [isProcessing, setIsProcessing] = useState(false);
   const router = useRouter();
 
