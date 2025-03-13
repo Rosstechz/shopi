@@ -25,9 +25,12 @@ const CartSidebar = () => {
         isCartOpen ? "translate-x-0" : "translate-x-full"
       } z-50`}
     >
-      <div className="flex justify-between items-center p-4 border-b">
+      <div className="flex justify-between items-center p-4 border-b border-gray-400 ">
         <h2 className="text-lg font-semibold">Cart</h2>
-        <button onClick={toggleCart} className="text-red-500 text-lg">
+        <button
+          onClick={toggleCart}
+          className="text-red-500 text-lg cursor-pointer "
+        >
           <IoMdClose />
         </button>
       </div>
@@ -39,7 +42,7 @@ const CartSidebar = () => {
           cartItems.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-4 border-b py-2"
+              className="flex items-center gap-4 border-b border-gray-400 py-2"
             >
               <img
                 src={item.images[0]}
@@ -53,14 +56,14 @@ const CartSidebar = () => {
                 <div className="flex items-center gap-2 mt-2">
                   <button
                     onClick={() => decreaseQuantity(item.id)}
-                    className="px-2 py-1 bg-red-500 text-white rounded-md"
+                    className="px-2 py-1 bg-red-500 text-white rounded-md cursor-pointer"
                   >
                     <FaMinus />
                   </button>
                   <span className="text-sm">{item.quantity}</span>
                   <button
                     onClick={() => increaseQuantity(item.id)}
-                    className="px-2 py-1 bg-green-500 text-white rounded-md"
+                    className="px-2 py-1 bg-green-500 text-white rounded-md cursor-pointer"
                   >
                     <FaPlus />
                   </button>
@@ -82,7 +85,7 @@ const CartSidebar = () => {
               toggleCart();
               router.push("/orders");
             }}
-            className="w-full py-3 bg-blue-500 text-white font-semibold rounded-md transition hover:bg-blue-600"
+            className="w-full py-3 bg-green-500 text-white font-semibold rounded-md transition hover:bg-green-600 cursor-pointer"
           >
             Proceed to Checkout
           </button>
