@@ -3,7 +3,7 @@ An Ecommerce web application build with Next.js@15
 
 
 # Features
--   User Authentication** (Clerk)  
+-   User Authentication (Clerk)  
 -   Global Cart State Management (Zustand)  
 -   Product Listing with API Integration
 -   Search & Filtering
